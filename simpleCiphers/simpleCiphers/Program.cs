@@ -6,7 +6,7 @@ namespace simpleCiphers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("I'll test the program here as things are built.");
         }
     }
 }
