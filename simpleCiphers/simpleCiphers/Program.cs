@@ -17,7 +17,7 @@ namespace simpleCiphers
         {
             // test railFenceCipher encrypt
             railFenceCipher myTest = new railFenceCipher();
-            string inputText = "hello !! world1";
+            string inputText = "CSC260 was a really great $%$## class!!!";
             string encipheredTest = myTest.encipher(inputText, 3);
             Console.WriteLine(encipheredTest);
             string decipheredText = myTest.decipher(inputText, 3);
