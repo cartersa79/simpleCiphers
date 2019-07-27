@@ -15,52 +15,26 @@ namespace simpleCiphers
     public abstract class cipher
     {
         // fields
-        private string _plainText;
-        private string _cipherText;
+        private string _plainText { get; set; }
+        private string _cipherText { get; set; }
 
 
         // getters and setters
-        public string PlainText
-        {
-            get
-            {
-                return this._plainText;
-            }
-            set
-            {
-                // convert user input to all uppercase and use regular expressions to
-                // keep only uppercase letters and numbers from 0-9. Other chars may cause
-                // challenges in enciphering and deciphering text if not eliminated
-
-                _plainText = _plainText.ToUpper();
-                _plainText = Regex.Replace(_plainText, @"[^A-Z0-9]", string.Empty);
-            }
-        }
-
-        public string CipherText
-        {
-            get
-            {
-                return this._cipherText;
-            }
-            set
-            {
-                // convert user input to all uppercase and use regular expressions to
-                // keep only uppercase letters and numbers from 0-9. Other chars may cause
-                // challenges in enciphering and deciphering text if not eliminated
-
-                _cipherText = _cipherText.ToUpper();
-                _cipherText = Regex.Replace(_cipherText, @"[^A-Z0-9]", string.Empty);
-            }
-        }
-
-
+        // used default        
+        
+        
         // constructors
         // not applicable to abstract class
 
 
         // methods
-        // none at this time
+        public string cleanText(string inputText)
+        {
+            inputText = inputText.ToUpper();
+            inputText = Regex.Replace(inputText, @"[^A-Z0-9]", string.Empty);
+
+            return inputText;
+        }
 
     }
 }

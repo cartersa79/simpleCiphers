@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace simpleCiphers.transpositionCiphers
+namespace simpleCiphers
 {
     public abstract class transpositionCipher : cipher
     {
