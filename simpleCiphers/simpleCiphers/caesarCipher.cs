@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace simpleCiphers
 {
-    class caesarCipher : substitutionCipher
+    class caesarCipher : substitutionCipher, IBruteForce
     {
         // fields
         // none
@@ -44,8 +44,14 @@ namespace simpleCiphers
             return encipher(inputText, 26 - key);
         }
 
+        public void bruteForceDecipher(string inputText)
+        {
+            caesarCipher unknownKey = new caesarCipher();
 
-
-
+            for (int i = 0; i < 26; i++)
+            {
+                Console.WriteLine(unknownKey.decipher(inputText, i));
+            }
+        }
     }
 }

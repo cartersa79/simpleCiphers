@@ -22,6 +22,7 @@ namespace simpleCiphers
             Console.WriteLine(encipheredTest);
             string decipheredText = myTest.decipher(inputText, 3);
             Console.WriteLine(decipheredText);
+            Console.WriteLine("\n");
 
             // test Caesar cipher
             caesarCipher testCaesar = new caesarCipher();
@@ -29,6 +30,9 @@ namespace simpleCiphers
             string caesarEncipheredTest = testCaesar.encipher(caesarTestInput, 1);
             Console.WriteLine(caesarEncipheredTest);
             Console.WriteLine(testCaesar.decipher(caesarEncipheredTest, 1));
+            Console.WriteLine("\n");
+            testCaesar.bruteForceDecipher(caesarEncipheredTest);
+
 
 
 
