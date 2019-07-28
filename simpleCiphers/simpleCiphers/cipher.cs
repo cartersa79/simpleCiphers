@@ -28,7 +28,7 @@ namespace simpleCiphers
 
 
         // methods
-        public string cleanText(string inputText)
+        public virtual string cleanText(string inputText)
         {
             inputText = inputText.ToUpper();
             inputText = Regex.Replace(inputText, @"[^A-Z0-9]", string.Empty);

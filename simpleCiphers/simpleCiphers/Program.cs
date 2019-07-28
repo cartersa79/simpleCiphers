@@ -15,7 +15,7 @@ namespace simpleCiphers
     {
         static void Main(string[] args)
         {
-            // test railFenceCipher encrypt
+            // test railFenceCipher encipher and decipher
             railFenceCipher myTest = new railFenceCipher();
             string inputText = "CSC260 was a really great $%$## class!!!";
             string encipheredTest = myTest.encipher(inputText, 3);
@@ -23,6 +23,12 @@ namespace simpleCiphers
             string decipheredText = myTest.decipher(inputText, 3);
             Console.WriteLine(decipheredText);
 
+            // test Caesar cipher
+            caesarCipher testCaesar = new caesarCipher();
+            string caesarTestInput = "I truly enjoyed the course, Thanks!";
+            string caesarEncipheredTest = testCaesar.encipher(caesarTestInput, 1);
+            Console.WriteLine(caesarEncipheredTest);
+            Console.WriteLine(testCaesar.decipher(caesarEncipheredTest, 1));
 
 
 
