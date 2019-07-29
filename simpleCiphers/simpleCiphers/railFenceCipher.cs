@@ -1,4 +1,24 @@
-﻿using System;
+﻿// Rail Fence Ciphers are a type of transposition ciphers. The plaintext characters
+// are re-ordered in such a way as to "jumble the message". With this particular,
+// you decide how many rails are on the fence and just write every letter of the
+// plain text in a diagonal pattern. The resulting rows are your enciphered text.
+// The following is an example of A 3 rail fence cipher. It is easy to read, just
+// read diagonally down, then up, etc.
+//
+// Plain Text: CSC260WASAGREATCLASS
+//
+//    C   6   S   E   L
+//     S 2 0 A A R A C A S
+//      C   W   G   T   S
+//
+// Enciphered Text: C6SELS20AARACASCWGTS
+//
+// This cipher is a pretty easy cipher to break but it requires some work. Most people
+// can't just look at it and break the code. It usually requires a pencil and paper
+// (or handy dandy developer to write a program) to read.
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
@@ -25,6 +45,8 @@ namespace simpleCiphers
         }
 
         // methods
+
+        // I wrote two encipher functions to demonstrate polymorphism
         public string encipher(string inputText)
         {
             // default railFence size is 2
@@ -124,7 +146,12 @@ namespace simpleCiphers
 
         // TODO: This is causing a problem with the decipher function. I'm not
         // sure why. It is throwing an index out of bounds error at line 79.
-        // I need to investigate further.
+        // I haven't been able to find the cause and need to investigate further.
+
+        // This function is intended to implement the IBruteForce interface and
+        // iterate through several fence sizes to see if an ungarbled message
+        // pops out of the results. It would make it easy to break this encryption
+        // if I could just figure out that index out of bounds bug.
 
         //public void bruteForceDecipher(string inputText)
         //{

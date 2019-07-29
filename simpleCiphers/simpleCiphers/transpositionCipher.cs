@@ -10,7 +10,8 @@
 // decipher is read from right to left. 
 //
 // This is an abstract class that inherits from the cipher base class. It is just
-// an 'abstraction layer' to help organize the code hierarchy.
+// an 'abstraction layer' to help organize the code hierarchy. It doesn't implement
+// anything.
 
 using System;
 using System.Collections.Generic;
@@ -20,18 +21,14 @@ namespace simpleCiphers
 {
     public abstract class transpositionCipher : cipher
     {
-               
         // fields
         // none
-
 
         // getters and setters
         // none
 
-
         // constructors
         // not applicable to abstract class
-
 
         // methods
         // none

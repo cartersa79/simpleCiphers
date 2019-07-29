@@ -1,13 +1,4 @@
-﻿// I used a few websites to get an idea of different algorithm implementations.
-// I didn't use one in particular but I took concepts from a few and wrote my
-// code to implement the class. I find that reading others' code teaches me new
-// techniques that I would otherwise not be exposed to. For instance,
-// I learned about StringBuilder and Enumerable thanks to one I found online.
-//
-// As a second check of my work, I used another of my favorite
-// websites: www.dcode.fr
-
-using System;
+﻿using System;
 
 namespace simpleCiphers
 {
