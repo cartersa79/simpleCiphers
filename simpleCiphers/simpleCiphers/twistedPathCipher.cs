@@ -25,7 +25,7 @@ using System.Text;
 
 namespace simpleCiphers
 {
-    class twistedPathCipher : transpositionCipher
+    public class twistedPathCipher : transpositionCipher
     {
         // TODO: All of it
     }

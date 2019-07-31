@@ -26,7 +26,7 @@ using System.Linq;
 
 namespace simpleCiphers
 {
-    class railFenceCipher : transpositionCipher //, IBruteForce
+    public class railFenceCipher : transpositionCipher //, IBruteForce
     {
         // fields
         private int _currentLine { get; set; }
@@ -47,6 +47,7 @@ namespace simpleCiphers
         // methods
 
         // I wrote two encipher functions to demonstrate polymorphism
+        // via overloading methods
         public string encipher(string inputText)
         {
             // default railFence size is 2

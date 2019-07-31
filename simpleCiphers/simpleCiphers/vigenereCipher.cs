@@ -8,7 +8,7 @@ using System.Text;
 
 namespace simpleCiphers
 {
-    class vigenereCipher : substitutionCipher
+    public class vigenereCipher : substitutionCipher
     {
     }
 }

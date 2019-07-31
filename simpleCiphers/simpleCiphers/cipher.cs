@@ -29,17 +29,13 @@ namespace simpleCiphers
     public abstract class cipher
     {
         // fields
-        private string _plainText { get; set; }
-        private string _cipherText { get; set; }
-
+        // none
 
         // getters and setters
-        // used default        
-        
+        // none        
         
         // constructors
         // not applicable to abstract class
-
 
         // methods
         public virtual string cleanText(string inputText)

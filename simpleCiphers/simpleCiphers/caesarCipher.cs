@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 
 namespace simpleCiphers
 {
-    class caesarCipher : substitutionCipher, IBruteForce
+    public class caesarCipher : substitutionCipher, IBruteForce
     {
         // fields
         // none

@@ -27,9 +27,9 @@ namespace simpleCiphers
     {
 
         // fields
-        int numWheels = 10;
+        public int numWheels = 10;
 
-        private char[,] wheels = {
+        private char[,] _wheels = {
             { 'A', 'B', 'C', 'E', 'I', 'G', 'D', 'J', 'F', 'V', 'U', 'Y', 'M', 'H', 'T', 'Q', 'K', 'Z', 'O', 'L', 'R', 'X', 'S', 'P', 'W', 'N' },
             { 'A', 'C', 'D', 'E', 'H', 'F', 'I', 'J', 'K', 'T', 'L', 'M', 'O', 'U', 'V', 'Y', 'G', 'Z', 'N', 'P', 'Q', 'X', 'R', 'W', 'S', 'B' },
             { 'A', 'D', 'K', 'O', 'M', 'J', 'U', 'B', 'G', 'E', 'P', 'H', 'S', 'C', 'Z', 'I', 'N', 'X', 'F', 'Y', 'Q', 'R', 'T', 'V', 'W', 'L' },
@@ -41,8 +41,7 @@ namespace simpleCiphers
             { 'A', 'J', 'D', 'S', 'K', 'Q', 'O', 'I', 'V', 'T', 'Z', 'E', 'F', 'H', 'G', 'Y', 'U', 'N', 'L', 'P', 'M', 'B', 'X', 'W', 'C', 'R' },
             { 'A', 'K', 'E', 'L', 'B', 'D', 'F', 'J', 'G', 'H', 'O', 'N', 'M', 'T', 'P', 'R', 'Q', 'S', 'V', 'Z', 'U', 'X', 'Y', 'W', 'I', 'C' }
         };
-
-
+        
         // getters and setters
         // none
 
@@ -62,8 +61,7 @@ namespace simpleCiphers
 
             return inputText;
         }
-
-
+        
         public string encipher(string inputText, int key)
         {
             inputText = this.cleanText(inputText);
@@ -73,8 +71,8 @@ namespace simpleCiphers
             {
                 for (int col = 0; col < 26; col++)      // each letter on wheel
                 {
-                    if (wheels[row, col] == inputText[row])
-                        sbResult.Append(wheels[row, ((col + key) % 26)]);
+                    if (_wheels[row, col] == inputText[row])
+                        sbResult.Append(_wheels[row, ((col + key) % 26)]);
                 }
             }
             return sbResult.ToString();
@@ -84,25 +82,5 @@ namespace simpleCiphers
         {
             return encipher(inputText, (26 + (-1 * key)));
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
