@@ -1,7 +1,6 @@
-﻿// This is the base class from which the cipher schemes inherit. All ciphers have an
-// unenciphered "plain text" and an enciphered "cipher text" that is implemented here.
-// It is common in the world of ciphers to eliminate characters such as spaces,
-// punctuation, etc. from these texts. Keeping these in can make it much easier to break
+﻿// This is the base class from which the various cipher schemes inherit. It is common
+// in the world of ciphers to eliminate characters such as spaces, punctuation, etc.
+// from the plain text message. Keeping these in can make it much easier to break
 // the cipher. For instance, if you know that every sentence ends in a punctuation mark
 // followed by a space, you've given yourself a big head start on cracking the code.
 //

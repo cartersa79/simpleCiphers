@@ -7,9 +7,9 @@ namespace simpleCiphers
         static void Main(string[] args)
         {
             // test railFenceCipher encipher and decipher
-            Console.WriteLine("This is testing the Rail Fence Cipher:");
+            Console.WriteLine("\n\nThis is testing the Rail Fence Cipher:");
             railFenceCipher myTest = new railFenceCipher();
-            string inputText = "CSC260 was a really great $%$## class!!!";
+            string inputText = "CSC260 was a great $%$## class!!!";
             string encipheredTest = myTest.encipher(inputText, 3);
             Console.WriteLine(encipheredTest);
             string decipheredTest = myTest.decipher(encipheredTest, 3);
@@ -30,9 +30,11 @@ namespace simpleCiphers
             Console.WriteLine("This is testing the Caesar Cipher:");
             caesarCipher testCaesar = new caesarCipher();
             string caesarTestInput = "I truly enjoyed the course, Thanks!";
+            string caesarTestInput2 = "You will never be able to crack my leet code!";
             string caesarEncipheredTest = testCaesar.encipher(caesarTestInput, 1);
             Console.WriteLine(caesarEncipheredTest);
             Console.WriteLine(testCaesar.decipher(caesarEncipheredTest, 1));
+            caesarEncipheredTest = testCaesar.encipher(caesarTestInput2, 19);
             Console.WriteLine("\nThis is the Brute Force Breaking of the Caesar Cipher:");
             testCaesar.bruteForceDecipher(caesarEncipheredTest);
 

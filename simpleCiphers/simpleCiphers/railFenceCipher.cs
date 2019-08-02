@@ -1,21 +1,25 @@
-﻿// Rail Fence Ciphers are a type of transposition ciphers. The plaintext characters
-// are re-ordered in such a way as to "jumble the message". With this particular,
-// you decide how many rails are on the fence and just write every letter of the
-// plain text in a diagonal pattern. The resulting rows are your enciphered text.
-// The following is an example of A 3 rail fence cipher. It is easy to read, just
-// read diagonally down, then up, etc.
-//
-// Plain Text: CSC260WASAGREATCLASS
-//
-//    C   6   S   E   L
-//     S 2 0 A A R A C A S
-//      C   W   G   T   S
-//
-// Enciphered Text: C6SELS20AARACASCWGTS
-//
-// This cipher is a pretty easy cipher to break but it requires some work. Most people
-// can't just look at it and break the code. It usually requires a pencil and paper
-// (or handy dandy developer to write a program) to read.
+﻿//Rail Fence Ciphers are a type of transposition ciphers.The plaintext characters
+//are re-ordered in such a way as to "jumble the message". With this particular,
+//you decide how many rails are on the fence and just write every letter of the
+
+//plain text in a diagonal pattern.The resulting rows are your enciphered text.
+//The following is an example of A 3 rail fence cipher.It is easy to read, just
+//read diagonally down, then up, etc.
+
+//Plain Text: CSC260WASAGREATCLASS
+
+//  C   6   S E   L
+//   S 2 0 A A R A C A S
+//    C   W G   T S
+
+
+//Enciphered Text: C6SELS20AARACASCWGTS
+
+//This cipher is a pretty easy cipher to break but it requires some work.Most people
+
+//can't just look at it and break the code. It usually requires a pencil and paper
+
+//(or handy dandy developer to write a program) to read.
 
 
 using System;
@@ -93,19 +97,16 @@ namespace simpleCiphers
                 fenceLines.Add(new StringBuilder());
 
             int[] lineLengths = Enumerable.Repeat(0, numLines).ToArray();
-
             int currentLine = 0;
             int direction = 1;
 
             for (int i = 0; i < inputText.Length; i++)
             {
                 lineLengths[currentLine]++;
-
                 if (currentLine == 0)
                     direction = 1;
                 else if (currentLine == numLines - 1)
                     direction = -1;
-
                 currentLine += direction;
             }
 
@@ -121,26 +122,20 @@ namespace simpleCiphers
             }
 
             StringBuilder output = new StringBuilder();
-
             currentLine = 0;
             direction = 1;
-
             int[] currentReadLine = Enumerable.Repeat(0, numLines).ToArray();
 
             for (int i = 0; i < inputText.Length; i++)
             {
-
                 output.Append(fenceLines[currentLine][currentReadLine[currentLine]]);
                 currentReadLine[currentLine]++;
-
                 if (currentLine == 0)
                     direction = 1;
                 else if (currentLine == numLines - 1)
                     direction = -1;
-
                 currentLine += direction;
             }
-
             return output.ToString();
         }
 

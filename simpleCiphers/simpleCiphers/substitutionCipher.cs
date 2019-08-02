@@ -1,4 +1,4 @@
-﻿// Transposition ciphers are ciphers in which the plaintext characters are changed
+﻿// Substitution ciphers are ciphers in which the plaintext characters are changed
 // but their order stays the same The following two lines are an example of this
 // where the letters are just each shifted back by 1. Are you a Stanley Kubrick fan?
 //
