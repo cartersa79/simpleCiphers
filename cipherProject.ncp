@@ -1,0 +1,160 @@
+<Project>
+  <Name>cipherProject</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>CipherProject</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>cipher</Name>
+        <Access>Public</Access>
+        <Location left="815" top="59" />
+        <Size width="162" height="125" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public virtual string cleanText()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>transpositionCipher</Name>
+        <Access>Public</Access>
+        <Location left="362" top="249" />
+        <Size width="162" height="122" />
+        <Collapsed>False</Collapsed>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>substitutionCipher</Name>
+        <Access>Public</Access>
+        <Location left="864" top="249" />
+        <Size width="162" height="122" />
+        <Collapsed>False</Collapsed>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>simpleMachineCipher</Name>
+        <Access>Public</Access>
+        <Location left="1306" top="249" />
+        <Size width="162" height="122" />
+        <Collapsed>False</Collapsed>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>railFenceCipher</Name>
+        <Access>Public</Access>
+        <Location left="402" top="431" />
+        <Size width="195" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int _currentLine</Member>
+        <Member type="Field">private int _currentDirection</Member>
+        <Member type="Field">private List&lt;StringBuilder&gt; fenceLines</Member>
+        <Member type="Constructor">public railFenceCipher()</Member>
+        <Member type="Method">public void encipher()</Member>
+        <Member type="Method">public void decipher()</Member>
+        <Member type="Method">public void bruteForceDecipher()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>twistedPathCipher</Name>
+        <Access>Public</Access>
+        <Location left="206" top="431" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>caesarCipher</Name>
+        <Access>Public</Access>
+        <Location left="864" top="431" />
+        <Size width="180" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public override void cleanText()</Member>
+        <Member type="Method">public string encipher()</Member>
+        <Member type="Method">public string decipher()</Member>
+        <Member type="Method">public void bruteForceDecipher()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>vigenereCipher</Name>
+        <Access>Public</Access>
+        <Location left="1071" top="431" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>jeffersonWheelCipher</Name>
+        <Access>Public</Access>
+        <Location left="1306" top="431" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int numWheels</Member>
+        <Member type="Field">private char[ , ] _wheels</Member>
+        <Member type="Method">public override string cleanText()</Member>
+        <Member type="Method">public void encipher()</Member>
+        <Member type="Method">public string decipher()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IBruteForce</Name>
+        <Access>Public</Access>
+        <Location left="633" top="488" />
+        <Size width="195" height="117" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void bruteForceDecipher()</Member>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>287</X>
+          <Y>404</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>443</X>
+          <Y>405</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>945</X>
+          <Y>403</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="4" second="9">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="6" second="9">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
